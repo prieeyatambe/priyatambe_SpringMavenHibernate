@@ -1,0 +1,64 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+body{
+
+}
+.main{
+	border: 5px double teal;
+	border-radius: 9px;
+	width: 500px;
+	padding: 25px;
+	margin: 150px 400px 150px 500px;
+}
+.form-style{
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	font-size: 20px;
+	padding: 7px;
+	margin: 5px;
+	width: 500px;
+}
+input[placeholder]{
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	font-size: 15px;
+	height: 25px;
+	width: 450px;
+	margin-top: 5px;		
+}
+
+</style>
+</head>
+<body>
+<div class="main">
+	<form:form action="add" method="post" modelAttribute="employee">
+		<div class="form-style">
+				  Employee Name:<br>
+				  <form:input path="employeeName" placeholder="Enter Name" />  
+        </div>   
+         <div class="form-style">
+                  Employee Address:<br>  
+                  <form:input path="employeeAddress" placeholder="Enter Address"/>  
+         </div>   
+		 <div class="form-style"> 
+                  Employee Phone:<br>  
+                  <form:input path="employeePhone" placeholder="Enter Phone No."/>  
+          </div>  
+          <div class="form-style">  
+                  Employee Salary:<br>  
+                  <form:input path="employeeSalary" placeholder="Enter Salary"/>  
+          </div>   
+		  <div class="form-style">  
+				  <input type="submit" value="Save"> &ensp; &ensp; &ensp; 
+				  <input type="reset" value="Reset">  	
+		  </div>
+		
+	</form:form>
+</div>
+</body>
+</html>
